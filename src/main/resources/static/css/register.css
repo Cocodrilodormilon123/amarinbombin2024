@@ -1,0 +1,76 @@
+body {
+    background-color: #f4f7f6; /* Color de fondo */
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Eliminar margen predeterminado */
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+    background-color: rgb(47, 79, 79); /* Color personalizado */
+}
+
+/* Contenedor principal */
+.container-fluid {
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Lado izquierdo */
+.left-side {
+    background-color: rgb(47, 79, 79); /* Color de fondo */
+    color: white; /* Color de texto */
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar texto */
+}
+
+/* Lado derecho */
+.right-side {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilo del card */
+.card {
+    background-color: #ffffff; /* Color de fondo del card */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo */
+}
+
+/* Estilo de los títulos */
+.card-title {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #333333; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo de los botones */
+.btn-success {
+    background-color: rgb(47, 79, 79); /* Color del botón */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.btn-success:hover {
+    background-color: #1d3535; /* Color al pasar el mouse */
+}
+
+/* Mensaje de error */
+.error {
+    color: red; /* Color para errores */
+}
+
+/* Enlace de registro */
+.card-link {
+    color: #007bff; /* Color del enlace */
+}
+
+.card-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}

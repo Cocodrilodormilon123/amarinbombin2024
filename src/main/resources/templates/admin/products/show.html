@@ -1,0 +1,39 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head th:insert="~{admin/template_admin::head}"></head>
+    <body>
+        <div th:insert="~{admin/template_admin::header}"></div>
+        
+        <div class="container mt-4">
+            <h2 class="text-center">Gestión de Productos</h2>
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre del Producto</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="product : ${products}">
+                        <td>
+                            <img class="img-thumbnail" th:src="@{/images/{img}(img=${product.imagen})}" alt="Imagen del producto" width="100">
+                        </td>
+                        <td th:text="${product.nombre}">nombre del producto</td>
+                        <td th:text="${product.precio}">precio del producto</td>
+                        <td th:text="${product.stock}">stock del producto</td>
+                        <td>
+                            <a th:href="@{/admin/products/view/{idPr}(idPr=${product.idPr})}" class="btn btn-success btn-sm">Ver</a>
+                            <a th:href="@{/admin/products/edit/{idPr}(idPr=${product.idPr})}" class="btn btn-warning btn-sm">Editar</a>
+                            <a th:href="@{/admin/products/delete/{idPr}(idPr=${product.idPr})}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="/admin/products/create" class="btn btn-primary mt-3">Crear Nuevo Producto</a>
+        </div>
+
+        <div class="bg-body-tertiary text-center mt-auto" th:insert="~{admin/template_admin::footer}"></div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.left-side {
+    background-color: rgb(47, 79, 79); /* Color para el lado izquierdo */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura */
+}
+
+.right-side {
+    background-color: #f8f9fa; /* Color claro para el lado derecho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura */
+}
+
+.card {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.btn-dark {
+    background-color: rgb(47, 79, 79); /* Color para el botón de ingresar */
+    color: white;
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: #1d3535; /* Hover color */
+}

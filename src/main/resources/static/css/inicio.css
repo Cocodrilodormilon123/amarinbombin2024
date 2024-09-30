@@ -1,0 +1,109 @@
+/* Estilos Generales */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #F5F5F5; /* Fondo claro */
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna para eCommerce */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido esté entre el header y el footer */
+}
+
+/* Header */
+header {
+    background-color: #2F4F4F; /* Verde oscuro */
+    padding: 0;
+    height: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo en posición flotante */
+.logo-container {
+    position: absolute;
+    top: 10px; /* Baja el logo un poco */
+    left: 20px;
+    z-index: 2;
+}
+
+.logo-container img {
+    max-height: 100px; /* Aumenta el tamaño del logo */
+    width: auto;
+    background-color: transparent; /* Elimina el fondo blanco */
+    border-radius: 50%; /* Añade borde redondeado si es necesario */
+}
+
+/* Estilos del Menú de Navegación */
+header .navbar-nav .nav-link {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #FFD700; /* Color dorado en hover */
+}
+
+header .navbar-toggler {
+    border-color: #FFFFFF;
+}
+
+header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28%255,255,255,0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Iconos del Header */
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Footer */
+footer {
+    background-color: #2F4F4F; /* Fondo verde oscuro */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    color: #FFFFFF; /* Color de texto blanco */
+}
+
+footer p {
+    margin: 0;
+    padding: 5px;
+}
+
+footer a {
+    color: #FFD700; /* Texto del footer dorado */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Redes Sociales */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+/* Sección de Contacto */
+.contact-info {
+    margin-top: 15px;
+    font-size: 14px;
+}

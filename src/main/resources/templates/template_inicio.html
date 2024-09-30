@@ -1,0 +1,74 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La Comarca</title>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+        <script th:src="@{/js/bootstrap.bundle.min.js}" type="text/javascript"></script>
+        <link th:href="@{/css/inicio.css}" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+
+        <header th:fragment="header">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <div class="logo-container">
+                        <img th:src="@{/img/logo.png}" alt="La Comarca" class="logo">
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Barra de búsqueda -->
+                        <form class="d-flex mx-auto" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Buscar">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img th:src="@{/img/carrito.png}" alt="Carrito" class="nav-icon">
+                                    Carrito
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/login}">
+                                    <img th:src="@{/img/usuario.png}" alt="Iniciar Sesión" class="nav-icon">
+                                    Iniciar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Nuevo Footer -->
+        <footer th:fragment="footer">
+            <div class="container">
+                <p>&copy; 2024 La Comarca. Todos los derechos reservados.</p>
+
+                <p>
+                    | <a href="/about">Sobre nosotros</a> |
+
+                </p>
+
+                <!-- Redes Sociales -->
+                <div class="social-media">
+                    <a href="https://facebook.com/tuempresa" target="_blank"><img th:src="@{/img/facebook.png}" alt="Facebook"></a>
+                    <a href="https://twitter.com/tuempresa" target="_blank"><img th:src="@{/img/twitter.png}" alt="Twitter"></a>
+                    <a href="https://instagram.com/tuempresa" target="_blank"><img th:src="@{/img/instagram.png}" alt="Instagram"></a>
+                </div>
+
+                <!-- Sección de Contacto -->
+                <div class="contact-info">
+                    <p>Teléfono: 999-999-999</p>
+                    <p>Email: contacto@lacomarca.com</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="~{template_inicio::head}"></head>
+<body>
+    <div th:insert="~{template_inicio::header}"></div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-3 mt-5">
+                <h4>Categorías</h4>
+                <ul class="list-group">
+                    <!-- Opción Tienda -->
+                    <li class="list-group-item">
+                        <a href="/tienda" class="text-dark">Tienda</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-dark" data-bs-toggle="collapse" data-bs-target="#categoriasSubmenu" aria-expanded="false">Categorías</a>
+                        <ul class="list-group collapse" id="categoriasSubmenu">
+                            <li class="list-group-item" th:each="category : ${categories}">
+                                <a th:text="${category.nombre}" href="#" class="text-dark"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="text-center mb-5">
+                    <h2>Bienvenidos a La Comarca Mayorista de Arroz</h2>
+                    <p class="lead">
+                        En "La Comarca", somos tu socio de confianza en la distribución de arroz al por mayor.
+                        Ofrecemos una amplia variedad de marcas y tipos de arroz, cuidadosamente seleccionados para satisfacer las necesidades de distribuidores, minoristas y empresas de alimentos.
+                    </p>
+                    <button class="btn btn-primary" onclick="window.location.href='/tienda'">Explora nuestros productos</button>
+                </div>
+
+                <section>
+                    <h3>Sobre Nosotros</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                Con más de 3 años de experiencia en la industria del arroz, "La Comarca" se ha consolidado como uno de los principales distribuidores mayoristas.
+                                Ofrecemos un extenso catálogo de marcas nacionales e internacionales, con productos que cubren desde arroz blanco e integral hasta variedades especiales.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img th:src="@{/img/waza.png}" class="img-fluid" alt="Arroz en distribución">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-5">
+                    <h3>Por Qué Elegirnos</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Variedad de marcas: Disponemos de un catálogo extenso con productos de las mejores marcas nacionales e internacionales.</li>
+                                <li>Precios competitivos: Ofrecemos precios que te permitirán maximizar tus márgenes de ganancia.</li>
+                                <li>Calidad garantizada: Trabajamos solo con productores de confianza que cumplen con los más altos estándares.</li>
+                                <li>Envíos rápidos y eficientes: Garantizamos entregas a tiempo en todo el país, asegurando que siempre tengas el inventario necesario.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <video width="100%" controls>
+                                <source th:src="@{/videos/comarca.mp4}" type="video/mp4">
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div th:insert="~{template_inicio::footer}"></div>
+</body>
+</html>
+

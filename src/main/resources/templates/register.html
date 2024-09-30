@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/register.css}" rel="stylesheet" type="text/css"/> <!-- Ruta al CSS -->
+</head>
+<body>
+
+<!-- Page Content -->
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <!-- Lado izquierdo -->
+        <div class="col-md-6 left-side text-center d-flex flex-column justify-content-center">
+            <h1>La Comarca</h1>
+            <p>Bienvenido a La Comarca. Regístrate para empezar.</p>
+        </div>
+
+        <!-- Lado derecho -->
+        <div class="col-md-6 right-side d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Registrar</h2>
+                    <form th:action="@{/register}" method="post" th:object="${user}">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" th:field="*{nombre}" placeholder="Ingrese su nombre" required autocomplete="off">
+                            <p th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" th:errorclass="error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" th:field="*{apellido}" placeholder="Ingrese su apellido" required autocomplete="off">
+                            <p th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" th:errorclass="error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="correo" th:field="*{correo}" placeholder="Ingrese su email" required autocomplete="off">
+                            <p th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}" th:errorclass="error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="celular">Teléfono:</label>
+                            <input type="text" class="form-control" id="celular" th:field="*{celular}" placeholder="Ingrese su teléfono" required autocomplete="off">
+                            <p th:if="${#fields.hasErrors('celular')}" th:errors="*{celular}" th:errorclass="error"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contrasena">Contraseña:</label>
+                            <input type="password" class="form-control" id="contrasena" th:field="*{contrasena}" placeholder="Ingrese su contraseña" required autocomplete="off">
+                            <p th:if="${#fields.hasErrors('contrasena')}" th:errors="*{contrasena}" th:errorclass="error"></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
